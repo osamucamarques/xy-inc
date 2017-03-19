@@ -1,0 +1,11 @@
+spring:
+    jpa:
+        database: MYSQL
+        hibernate:
+            ddl-auto: validate
+
+    datasource:
+        url: jdbc:mysql://xy-inc-mysql:3306/xy-inc
+        username: xy-inc
+        password: xy-inc
+driver-class-name: com.mysql.jdbc.Driver
