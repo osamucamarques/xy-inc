@@ -1,5 +1,6 @@
 # xy-inc
 Multi model Spring Boot Application running inside docker container linked with MySQL container.
+For details please read: https://github.com/samucamarques/xy-inc/wiki#welcome-to-the-xy-inc-wiki
 
 ### How to run it with Docker step by step
 Assume you already have Docker installed. See https://docs.docker.com/installation/.
