@@ -35,7 +35,7 @@ docker run -t --net=xy-inc-network --name=xy-inc-application --link=xy-inc-mysql
 
 
 
-Now, you're read for test services with any HTTP client.
+Now, you're read to test services with any HTTP client.
 
 
 
