@@ -3,8 +3,8 @@ package br.com.zup.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -15,14 +15,14 @@ public class InterestPoint {
 	@GeneratedValue
 	private Long id;
 
-	@NotEmpty
-	@Max(100)
+	@NotEmpty(message = "O nome do ponto de interesse deve ser informado.")
+	@Size(max = 100, message = "O nome do ponto de interesse deve conter no máximo 100 caracteres.")
 	private String name;
 
-	@NotNull
+	@Min(value = 0, message = "A coordenada 'x' do ponto de interesse deve ser maior que zero.")
 	private int x;
 
-	@NotNull
+	@Min(value = 0, message = "A coordenada 'y' do ponto de interesse deve ser maior que zero.")
 	private int y;
 
 	public InterestPoint(String name2, int x2, int y2) {
@@ -64,5 +64,10 @@ public class InterestPoint {
 
 	public void setY(int y) {
 		this.y = y;
+	}
+	
+	@Override
+	public String toString() {
+		return "[name = " + name + ", x =" + x + ", y = " + y + "]";
 	}
 }

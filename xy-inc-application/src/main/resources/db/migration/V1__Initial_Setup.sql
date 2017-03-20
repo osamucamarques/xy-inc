@@ -1,4 +1,4 @@
-CREATE TABLE interest_points (
+CREATE TABLE interest_point (
 	id BIGINT NOT NULL AUTO_INCREMENT,
 	name varchar(100) NOT NULL,
 	x int NOT NULL,
@@ -6,4 +6,4 @@ CREATE TABLE interest_points (
 	PRIMARY KEY (id)
 );
 
-INSERT INTO interest_points(name,x,y) VALUES ('Lanchonete', 27, 12);
+INSERT INTO interest_point(name,x,y) VALUES ('Lanchonete', 27, 12);
